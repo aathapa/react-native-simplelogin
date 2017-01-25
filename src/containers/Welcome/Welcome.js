@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text,View,Image,StatusBar,TouchableOpacity } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { Colors,Images,Fonts } from '../../theme';
 import styles from './WelcomeStyles';
 
@@ -30,10 +31,10 @@ export default class App extends Component {
                     </Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.signInContainer}>
+                    <TouchableOpacity style={styles.signInContainer} onPress={Actions.login}>
                         <Text style={styles.signInText}>SIGN IN</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.signUpContainer}>
+                    <TouchableOpacity style={styles.signUpContainer} onPress={Actions.signup}>
                         <Text style={styles.signUpText}>SIGN UP</Text>
                     </TouchableOpacity>
                 </View>
