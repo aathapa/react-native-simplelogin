@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Text,View,Image,StatusBar } from 'react-native';
-import { Colors,Images } from '../../theme';
+import { Text,View,Image,StatusBar,TouchableOpacity } from 'react-native';
+import { Colors,Images,Fonts } from '../../theme';
 import styles from './WelcomeStyles';
 
 export default class App extends Component {
@@ -19,22 +19,23 @@ export default class App extends Component {
                 <View style={styles.logoStyle}>
                     <Image 
                         source={Images.logo}
-                        style={{height: 100,width: 100}}
+                        style={{height: 120,width: 120}}
                         resizeMode= 'contain'
                     />
+                    <Text style={styles.reactNativeText}>React Native</Text>
                 </View>
                 <View style={styles.info}>
                     <Text style={styles.welcomeText}>Welcome! {"\n"}
-                        <Text>React Native</Text>
+                        <Text style={{fontSize:Fonts.size.h5}}>React Native</Text>
                     </Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <View style={styles.signInContainer}>
-                        <Text>Sign In</Text>
-                    </View>
-                    <View style={styles.signUpContainer}>
-                        <Text>Sign Up</Text>
-                    </View>
+                    <TouchableOpacity style={styles.signInContainer}>
+                        <Text style={styles.signInText}>SIGN IN</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.signUpContainer}>
+                        <Text style={styles.signUpText}>SIGN UP</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );
