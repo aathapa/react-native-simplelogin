@@ -13,5 +13,12 @@ export default styles = {
         height: 80,
         width: 80,
         borderRadius: 40
+    },
+    addPicIcon: {
+        height: 100,
+        width: 100,
+        borderRadius: 50,
+        borderColor: '#fff',
+        
     }
 }

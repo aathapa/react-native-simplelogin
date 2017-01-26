@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text,View,TouchableOpacity,Image } from 'react-native';
+import IonIcons from 'react-native-vector-icons/Ionicons';
 import styles from './ProfileBackgroundStyle';
 import { Images } from '../../theme';
 
@@ -7,8 +8,27 @@ class LogIn extends Component {
     constructor(props){
         super(props);
     }
+    renderPic() {
+        switch(this.props.title){
+            case 'login': 
+               return ( 
+                   <Image 
+                        source={Images.profilePic}
+                        style= {styles.profilePic}
+                    />
+                );
+            case 'signup':
+                return( 
+                    <IonIcons 
+                        name= 'md-person-add'
+                        size={60}
+                        color="#ddd"
+                    />  
+                );     
+        }
+    }
     render() {
-        const { style } = this.props;
+        const { style,title } = this.props;
         return(
             <View style={style}>
                 <Image 
@@ -16,10 +36,7 @@ class LogIn extends Component {
                     style={styles.profileBackgroundImage}
                 >
                     <TouchableOpacity>
-                        <Image 
-                            source={Images.profilePic}
-                            style= {styles.profilePic}
-                        />
+                        {this.renderPic()}
                     </TouchableOpacity>
                         
                 </Image>

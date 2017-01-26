@@ -20,6 +20,7 @@ export default styles = {
     },
     titleTextStyle: {
         fontFamily: Fonts.type.bold,
-        color: Colors.whiteText
+        color: Colors.whiteText,
+        fontSize: Fonts.size.regular
     }
 }

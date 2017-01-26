@@ -13,7 +13,7 @@ export default class TextField extends Component {
         const { placeholder,iconName,secureTextEntry } = this.props;
         return(
             <View style={styles.mainTextView}>
-                <FontAwesome name= {iconName} size={20} color='#000' style={styles.textViewImage}/>
+                <FontAwesome name= {iconName} size={20} color='#424242' style={styles.textViewImage}/>
                 <FormInput
                     containerStyle={styles.formInputContainerStyle}
                     placeholder={placeholder}

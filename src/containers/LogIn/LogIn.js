@@ -4,7 +4,7 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
 import { NavBar,TextField,ProfileBackground,Button } from '../../components';
 import styles from './LogInStyle';
-import { Images } from '../../theme';
+import { Images,Colors } from '../../theme';
 
 class LogIn extends Component {
     constructor(props){
@@ -28,13 +28,15 @@ class LogIn extends Component {
                 </View>
                 <View style={{flex: 0.42}}>
                     <NavBar 
-                    style={{backgroundColor: '#3498db'}}
-                    leftButton={this.leftButton()}
-                    title= 'SIGN IN'
-                />
+                        style={{backgroundColor: Colors.signInBackgroundColor}}
+                        leftButton={this.leftButton()}
+                        title= 'SIGN IN'
+                    />
                 </View>
                 <View style= {{flex: 1}}>
-                    <ProfileBackground />
+                    <ProfileBackground 
+                        title= 'login'
+                    />
                 </View >
                 
                 <View style={[styles.logInView,{flex:2}]}>
@@ -50,7 +52,7 @@ class LogIn extends Component {
                 </View>
                 <View>
                     <Button 
-                        style={{backgroundColor: '#3498db'}}
+                        style={{backgroundColor: Colors.signInBackgroundColor}}
                         title= 'SIGN IN'
                     />
                 </View>

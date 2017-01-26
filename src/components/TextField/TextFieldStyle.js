@@ -3,7 +3,7 @@ import { ApplicationStyles,Fonts,Colors } from '../../theme';
 export default styles = {
     ...ApplicationStyles.screen,
   mainTextView: { 
-      flexDirection: 'row',
+    flexDirection: 'row',
   },
   formInputContainerStyle: {
     flex: 2,
@@ -16,8 +16,8 @@ export default styles = {
     fontSize: Fonts.size.mediumSmall
   },
   textViewImage: {
-      flex:0.2,
-       marginLeft: 10,
-       marginTop: 25
+    flex:0.2,
+    marginLeft: 10,
+    marginTop: 25
   }
 }

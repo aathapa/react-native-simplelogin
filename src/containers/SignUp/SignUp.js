@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Text,View,StatusBar,TouchableOpacity } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar,ProfileBackground } from '../../components';
+import { NavBar,ProfileBackground,TextField,Button } from '../../components';
+import styles from './SignUpStyle';
+import { Colors } from '../../theme';
 
 class SignUp extends Component {
     leftButton(){
@@ -20,19 +22,36 @@ class SignUp extends Component {
                         barStyle="light-content"
                     />
                 </View>
-                <View>
+                <View style={{flex: 0.42}}>
                     <NavBar 
-                    style= {{backgroundColor: '#9b59b6'}}
+                    style= {{backgroundColor: Colors.SignUpBackgroundColor}}
                     title= "SIGN UP"
                     leftButton= {this.leftButton()}
                 />
                 </View>
-                <View>
-                    <ProfileBackground />
+                <View style={{flex: 1}}>
+                    <ProfileBackground
+                        title= 'signup'
+                    />
                 </View>
-                
-                
-                <Text>Sign Up</Text>
+                <View style={[styles.signUpView,{flex: 2}]}>
+                    <TextField iconName='user-circle-o' placeholder="FULL NAME" />
+                    <View style={styles.separator} />
+                    <TextField iconName='envelope-o' placeholder="EMAIL" />
+                    <View style={styles.separator} />
+                    <TextField iconName='lock' placeholder="PASSWORD" />
+                    <View style={styles.separator} />
+                    <TextField iconName='transgender' placeholder="GENDER" />
+                    <View style={styles.separator} />
+                    <TextField iconName='gift' placeholder="BIRTHDAY" />
+                    <View style={styles.separator} />
+                </View>
+                <View>
+                    <Button 
+                        title='SIGN UP'
+                        style= {{backgroundColor: Colors.SignUpBackgroundColor}}
+                    />
+                </View>
             </View>
         );
     }
