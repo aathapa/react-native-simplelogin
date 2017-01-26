@@ -1,6 +1,6 @@
 # react-native-simplelogin
 This is a simple Sign In and Sign Up form created with React Native <br />
-Follow the instruction to test it directly on your machine: <br />
+Follow the instructions to test it directly on your machine: <br />
 <li>At first, make sure <b>Node</b> and <b>react-native</b> are installed on your machine(if not installed https://facebook.github.io/react-native/docs/getting-started.html#content)</li> <br />
 <li>Open project directory in terminal </li> <br />
 <li>Type <b>npm install</b> and hit enter </li> <br />
