@@ -1,4 +1,4 @@
-import { ApplicationStyles,Colors,Fonts } from '../theme';
+import { ApplicationStyles,Colors,Fonts } from '../../theme';
 
 export default styles = {
     navBarContainer: {

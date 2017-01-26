@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text,View,StatusBar,TouchableOpacity } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import NavBar from '../../components/NavBar';
+import { NavBar } from '../../components';
 
 class LogIn extends Component {
     constructor(props){
