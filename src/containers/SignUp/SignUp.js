@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text,View,StatusBar,TouchableOpacity } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar } from '../../components';
+import { NavBar,ProfileBackground } from '../../components';
 
 class SignUp extends Component {
     leftButton(){
@@ -14,18 +14,24 @@ class SignUp extends Component {
     }
     render() {
         return(
-            <View>
+            <View style={{flex:1}}>
                 <View>
                     <StatusBar
                         barStyle="light-content"
                     />
                 </View>
-                <NavBar 
+                <View>
+                    <NavBar 
                     style= {{backgroundColor: '#9b59b6'}}
                     title= "SIGN UP"
                     leftButton= {this.leftButton()}
-
                 />
+                </View>
+                <View>
+                    <ProfileBackground />
+                </View>
+                
+                
                 <Text>Sign Up</Text>
             </View>
         );

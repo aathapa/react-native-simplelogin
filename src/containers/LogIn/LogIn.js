@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text,View,StatusBar,TouchableOpacity,Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar,TextField } from '../../components';
+import { NavBar,TextField,ProfileBackground } from '../../components';
 import styles from './LogInStyle';
 import { Images } from '../../theme';
 
@@ -20,32 +20,32 @@ class LogIn extends Component {
 
     render() {
         return(
-            <View>
+            <View style={{flex:1}}>
                 <View>
                     <StatusBar
                         barStyle="light-content"
                     />
                 </View>
-                <NavBar 
+                <View style={{flex: 0.37}}>
+                    <NavBar 
                     style={{backgroundColor: '#3498db'}}
                     leftButton={this.leftButton()}
                     title= 'SIGN IN'
                 />
-                <View style={styles.profileBackgroundImageContainer}>
-                    <Image 
-                        source= {Images.profileBg}
-                        style={styles.profileBackgroundImage}
-                    >
-                        <TouchableOpacity >
-                            <Image 
-                                source={Images.profilePic}
-                                style= {styles.profilePic}
-                            />
-                        </TouchableOpacity>
-                        
-                    </Image>
-                    
                 </View>
+                <View style= {{flex: 1}}>
+                    <ProfileBackground />
+                </View >
+                
+                <View style={[styles.logInView,{flex:2}]}>
+                    <TextField iconName="envelope-o" placeholder= "Email" />
+                    <View style={styles.separator} />
+                    <TextField iconName="envelope-o" placeholder= "Email" />
+                    <View style={styles.separator} />
+                    <TextField iconName="envelope-o" placeholder= "Email" />
+                    <View style={styles.separator} />
+                </View>
+
             </View>
         );
     }

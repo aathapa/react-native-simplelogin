@@ -2,7 +2,6 @@ import { ApplicationStyles,Colors,Fonts } from '../../theme';
 
 export default styles = {
     navBarContainer: {
-        height: 80,
     },
     navBarComponent:{
         marginTop: 40,
