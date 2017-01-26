@@ -7,3 +7,7 @@ Follow the instructions to test it directly on your machine: <br />
 <li>After installation of node_modules, within the same directory, type <b>rnpm link</b> and hit Enter</li> <br />
 <li>For <b>Android</b> Users: type <b>react-native run-android</b> </li> <br />
 <li>For <b>iOS</b> Users: open project_folder/ios/project_name.xcodeproj </li> 
+
+[![welcome.png](https://s29.postimg.org/yyc4577t3/welcome.png)](https://postimg.org/image/tzolqo403/)
+[![signin.png](https://s23.postimg.org/ki7qgkaej/signin.png)](https://postimg.org/image/p43uowvxj/)
+[![signup.png](https://s23.postimg.org/xnzi7e523/signup.png)](https://postimg.org/image/48ttye0if/)
