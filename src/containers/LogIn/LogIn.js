@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text,View,StatusBar,TouchableOpacity,Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar,TextField,ProfileBackground } from '../../components';
+import { NavBar,TextField,ProfileBackground,Button } from '../../components';
 import styles from './LogInStyle';
 import { Images } from '../../theme';
 
@@ -26,7 +26,7 @@ class LogIn extends Component {
                         barStyle="light-content"
                     />
                 </View>
-                <View style={{flex: 0.37}}>
+                <View style={{flex: 0.42}}>
                     <NavBar 
                     style={{backgroundColor: '#3498db'}}
                     leftButton={this.leftButton()}
@@ -40,10 +40,20 @@ class LogIn extends Component {
                 <View style={[styles.logInView,{flex:2}]}>
                     <TextField iconName="user-circle-o" placeholder= "USERNAME" />
                     <View style={styles.separator} />
-                    <TextField iconName="lock" placeholder= "PASSWORD" />
+                    <TextField 
+                        iconName="lock" 
+                        placeholder= "PASSWORD" 
+                        secureTextEntry= {true}
+
+                     />
                     <View style={styles.separator} />
                 </View>
-
+                <View>
+                    <Button 
+                        style={{backgroundColor: '#3498db'}}
+                        title= 'SIGN IN'
+                    />
+                </View>
             </View>
         );
     }

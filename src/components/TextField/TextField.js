@@ -10,14 +10,16 @@ export default class TextField extends Component {
         super(props);
     }
     render() {
-        const { placeholder,iconName } = this.props;
+        const { placeholder,iconName,secureTextEntry } = this.props;
         return(
             <View style={styles.mainTextView}>
                 <FontAwesome name= {iconName} size={20} color='#000' style={styles.textViewImage}/>
                 <FormInput
                     containerStyle={styles.formInputContainerStyle}
                     placeholder={placeholder}
-                    
+                    secureTextEntry={secureTextEntry}
+                    autoCorrect={false}
+                    autoCapitalize='none'
                     inputStyle={styles.formInputStyle}
                     underlineColorAndroid={Colors.transparent}
                 />
