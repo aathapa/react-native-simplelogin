@@ -1,8 +1,8 @@
 const ApplicationStyles = {
     screen: {
-        speparator: {
-            height: 2,
-            backgroundColor: '#000'
+        separator: {
+            height: 1,
+            backgroundColor: '#ddd'
         },
         backgroundImage: {
             position: 'absolute',

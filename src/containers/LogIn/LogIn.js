@@ -38,11 +38,9 @@ class LogIn extends Component {
                 </View >
                 
                 <View style={[styles.logInView,{flex:2}]}>
-                    <TextField iconName="envelope-o" placeholder= "Email" />
+                    <TextField iconName="user-circle-o" placeholder= "USERNAME" />
                     <View style={styles.separator} />
-                    <TextField iconName="envelope-o" placeholder= "Email" />
-                    <View style={styles.separator} />
-                    <TextField iconName="envelope-o" placeholder= "Email" />
+                    <TextField iconName="lock" placeholder= "PASSWORD" />
                     <View style={styles.separator} />
                 </View>
 

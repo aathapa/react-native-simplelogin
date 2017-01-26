@@ -20,7 +20,7 @@ export default class TextField extends Component {
                     
                     inputStyle={styles.formInputStyle}
                     underlineColorAndroid={Colors.transparent}
-        />
+                />
             </View>
             
         );
