@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text,View,StatusBar,TouchableOpacity } from 'react-native';
+import { Text,View,StatusBar,TouchableOpacity,TouchableWithoutFeedback,dismisskeyboard } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
 import { NavBar,ProfileBackground,TextField,Button } from '../../components';
@@ -16,7 +16,8 @@ class SignUp extends Component {
     }
     render() {
         return(
-            <View style={{flex:1}}>
+            <TouchableWithoutFeedback onPress={()=> dismisskeyboard()}>
+                <View style={{flex:1}}>
                 <View>
                     <StatusBar
                         barStyle="light-content"
@@ -24,9 +25,9 @@ class SignUp extends Component {
                 </View>
                 <View style={{flex: 0.42}}>
                     <NavBar 
-                    style= {{backgroundColor: Colors.SignUpBackgroundColor}}
-                    title= "SIGN UP"
-                    leftButton= {this.leftButton()}
+                        style= {{backgroundColor: Colors.SignUpBackgroundColor}}
+                        title= "SIGN UP"
+                        leftButton= {this.leftButton()}
                 />
                 </View>
                 <View style={{flex: 1}}>
@@ -39,7 +40,7 @@ class SignUp extends Component {
                     <View style={styles.separator} />
                     <TextField iconName='envelope-o' placeholder="EMAIL" />
                     <View style={styles.separator} />
-                    <TextField iconName='lock' placeholder="PASSWORD" />
+                    <TextField iconName='lock' placeholder="PASSWORD" secureTextEntry={true}/>
                     <View style={styles.separator} />
                     <TextField iconName='transgender' placeholder="GENDER" />
                     <View style={styles.separator} />
@@ -53,6 +54,8 @@ class SignUp extends Component {
                     />
                 </View>
             </View>
+            </TouchableWithoutFeedback>
+            
         );
     }
 }

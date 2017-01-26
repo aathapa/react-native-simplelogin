@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text,View,StatusBar,TouchableOpacity,Image } from 'react-native';
+import { Text,View,StatusBar,TouchableOpacity,Image,dismisskeyboard,TouchableWithoutFeedback } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
 import { NavBar,TextField,ProfileBackground,Button } from '../../components';
@@ -20,7 +20,8 @@ class LogIn extends Component {
 
     render() {
         return(
-            <View style={{flex:1}}>
+            <TouchableWithoutFeedback onPress={()=> dismisskeyboard()}>
+                <View style={{flex:1}}>
                 <View>
                     <StatusBar
                         barStyle="light-content"
@@ -57,6 +58,8 @@ class LogIn extends Component {
                     />
                 </View>
             </View>
+            </TouchableWithoutFeedback>
+            
         );
     }
 }
