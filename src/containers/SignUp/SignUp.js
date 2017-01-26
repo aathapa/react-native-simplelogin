@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Text,View,StatusBar,TouchableOpacity,TouchableWithoutFeedback,dismisskeyboard } from 'react-native';
+import { Text,View,StatusBar,TouchableOpacity,TouchableWithoutFeedback } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar,ProfileBackground,TextField,Button } from '../../components';
+import { NavBar,ProfileBackground,TextField,ButtonPlatform } from '../../components';
 import styles from './SignUpStyle';
 import { Colors } from '../../theme';
+import dismissKeyboard from 'dismissKeyboard';
 
 class SignUp extends Component {
     leftButton(){
@@ -16,7 +17,7 @@ class SignUp extends Component {
     }
     render() {
         return(
-            <TouchableWithoutFeedback onPress={()=> dismisskeyboard()}>
+            <TouchableWithoutFeedback onPress={()=> dismissKeyboard()}>
                 <View style={{flex:1}}>
                 <View>
                     <StatusBar
@@ -48,7 +49,7 @@ class SignUp extends Component {
                     <View style={styles.separator} />
                 </View>
                 <View>
-                    <Button 
+                    <ButtonPlatform 
                         title='SIGN UP'
                         style= {{backgroundColor: Colors.SignUpBackgroundColor}}
                     />

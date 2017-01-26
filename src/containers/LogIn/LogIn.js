@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Text,View,StatusBar,TouchableOpacity,Image,dismisskeyboard,TouchableWithoutFeedback } from 'react-native';
+import { Text,View,StatusBar,TouchableOpacity,Image,TouchableWithoutFeedback } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar,TextField,ProfileBackground,Button } from '../../components';
+import { NavBar,TextField,ProfileBackground,ButtonPlatform } from '../../components';
 import styles from './LogInStyle';
 import { Images,Colors } from '../../theme';
+import dismissKeyboard from 'dismissKeyboard';
 
 class LogIn extends Component {
     constructor(props){
@@ -20,7 +21,7 @@ class LogIn extends Component {
 
     render() {
         return(
-            <TouchableWithoutFeedback onPress={()=> dismisskeyboard()}>
+            <TouchableWithoutFeedback onPress={()=> dismissKeyboard()} >
                 <View style={{flex:1}}>
                 <View>
                     <StatusBar
@@ -52,7 +53,7 @@ class LogIn extends Component {
                     <View style={styles.separator} />
                 </View>
                 <View>
-                    <Button 
+                    <ButtonPlatform 
                         style={{backgroundColor: Colors.signInBackgroundColor}}
                         title= 'SIGN IN'
                     />
