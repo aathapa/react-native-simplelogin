@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Text,View,StatusBar,TouchableOpacity } from 'react-native';
+import { Text,View,StatusBar,TouchableOpacity,Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Actions } from 'react-native-router-flux';
-import { NavBar } from '../../components';
+import { NavBar,TextField } from '../../components';
+import styles from './LogInStyle';
+import { Images } from '../../theme';
 
 class LogIn extends Component {
     constructor(props){
@@ -29,7 +31,21 @@ class LogIn extends Component {
                     leftButton={this.leftButton()}
                     title= 'SIGN IN'
                 />
-                <Text>Login</Text>
+                <View style={styles.profileBackgroundImageContainer}>
+                    <Image 
+                        source= {Images.profileBg}
+                        style={styles.profileBackgroundImage}
+                    >
+                        <TouchableOpacity >
+                            <Image 
+                                source={Images.profilePic}
+                                style= {styles.profilePic}
+                            />
+                        </TouchableOpacity>
+                        
+                    </Image>
+                    
+                </View>
             </View>
         );
     }
